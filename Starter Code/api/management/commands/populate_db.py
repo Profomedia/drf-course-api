@@ -2,7 +2,7 @@ import random
 from decimal import Decimal
 
 from django.core.management.base import BaseCommand
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.utils import lorem_ipsum
 from api.models import User, Product, Order, OrderItem
 
@@ -13,7 +13,7 @@ class Command(BaseCommand):
         # get or create superuser
         user = User.objects.filter(username='admin').first()
         if not user:
-            user = User.objects.create_superuser(username='admin', password='test')
+            user = User.objects.create_superuser(username='profo', password='profomedia')
 
         # create products - name, desc, price, stock, image
         products = [
